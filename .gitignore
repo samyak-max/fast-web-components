@@ -89,7 +89,7 @@ lerna-debug.log
 Thumbs.db
 
 # Custom Elements Manifest
-custom-elements.json
+# custom-elements.json
 
 # Storybook static build
 storybook-static

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/search-component/search.stories.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "Default",
+          "type": {
+            "text": "any"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/search-component/search.stories.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "Default",
+          "declaration": {
+            "name": "Default",
+            "module": "src/search-component/search.stories.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/search-component/search.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "specialColor"
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ToolSearch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Search Tools'"
+            },
+            {
+              "kind": "field",
+              "name": "default",
+              "type": {
+                "text": "string"
+              },
+              "default": "'👋'"
+            },
+            {
+              "kind": "field",
+              "name": "'searchInput'",
+              "type": {
+                "text": "HTMLInputElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "kind": "method",
+              "name": "apiCall",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "searchHandler",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "buttonClickHandler",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "name": "FASTElement",
+            "package": "@microsoft/fast-element"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "specialColor",
+          "declaration": {
+            "name": "specialColor",
+            "module": "src/search-component/search.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "ToolSearch",
+          "declaration": {
+            "name": "ToolSearch",
+            "module": "src/search-component/search.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
