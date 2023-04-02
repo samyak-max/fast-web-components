@@ -1,4 +1,6 @@
 import { FASTElement, attr, customElement, html, ref, css } from '@microsoft/fast-element';
+import { template } from './search.template';
+import { styles } from './search.styles';
 import { DesignToken } from '@microsoft/fast-foundation';
 import { fastButton, provideFASTDesignSystem } from '@microsoft/fast-components';
 import axios from 'axios';
@@ -19,26 +21,13 @@ DesignToken.registerRoot(root);
 export const specialColor = DesignToken.create<string>('special-color').withDefault('#FFFFFF');
 specialColor.setValueFor(root, "#ffffff");
 
-const styles = css`
-    :host {
-        background: ${specialColor};
-    }
-`
 provideFASTDesignSystem()
 .withPrefix("tool")
 .register(fastButton())
 
 @customElement({
     name: 'tool-search',
-    template: html<ToolSearch>`
-    <label>
-        ${x => x.label}
-        <input type="search" ${ref('searchInput')} @search="${x => x.searchHandler()}" />
-    </label>
-    <button @click="${x => x.buttonClickHandler()}">
-        <slot>${x => x.default}</slot>
-    </button>
-    `,
+    template,
     styles
 })
 
@@ -62,11 +51,11 @@ export class ToolSearch extends FASTElement {
         return this.data;
     }
 
-    private async searchHandler() {
+    async searchHandler() {
         this.apiCall();
     }
 
-    private buttonClickHandler() {
+    async buttonClickHandler() {
         this.apiCall();
     }
 }
