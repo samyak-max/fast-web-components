@@ -8,11 +8,20 @@ export const styles = css`
     --border-color: #40527c;
     --border-size: 2px;
     --specialColor: #40527c;
-    background: {--specialColor};
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 150px;
-    text-align: center;
+    --custom-property-name: #40527c;
+    background: {--custom-property-name};
   }
+    .top-div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .info{
+        font-size: 0.99rem;
+        margin-bottom: 30px;
+    }
+    .search {
+        display: flex;
+        gap: 10px;
+    }
 `

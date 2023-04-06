@@ -18,12 +18,17 @@ import axios from 'axios';
 const root = document.querySelector("#root")! as HTMLDivElement;
 DesignToken.registerRoot(root);
 
-export const specialColor = DesignToken.create<string>('special-color').withDefault('#FFFFFF');
-specialColor.setValueFor(root, "#ffffff");
+export const specialColor = DesignToken.create<string>({
+    name:"special-color",
+    cssCustomPropertyName: "custom-property-name"
+}).withDefault('#FFFFFF');
+specialColor.setValueFor(root, "red");
 
-provideFASTDesignSystem()
-.withPrefix("tool")
-.register(fastButton())
+
+
+// provideFASTDesignSystem()
+// .withPrefix("tool")
+// .register(fastButton())
 
 @customElement({
     name: 'tool-search',
@@ -34,6 +39,7 @@ provideFASTDesignSystem()
 export class ToolSearch extends FASTElement {
     @attr label: string = 'Search Tools';
     @attr default: string = 'search';
+    @attr infoHead: string = '*Result object is logged in actions tab as detail';
     'searchInput': HTMLInputElement ;
     data = {};
     

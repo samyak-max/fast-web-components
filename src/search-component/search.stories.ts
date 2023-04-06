@@ -1,4 +1,4 @@
-import "./search.search";
+import "./search";
 
 export default {
     title: 'Components/My Search',
@@ -6,6 +6,7 @@ export default {
     args: {
         label: 'Search Workflow' ,
         default: 'search',
+        infoHead: 'Result object is logged in actions tab as detail**',
         ['--font-size']: '1rem',
         ['--padding']: '0.25rem'
     },
@@ -17,7 +18,7 @@ export default {
 };
 
 const Template = (args: any) => `
-    <tool-search label="${args.label}">${args.default}</tool-search>
+    <tool-search label="${args.label}"> ${args.default}</tool-search>
 `;
 
 export const Default: any = Template.bind({});
